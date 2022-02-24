@@ -6,19 +6,30 @@ import com.coforge.hms.model.Employee;
 public class EmployeeDTO {
 
 	private long empId;
-    private String empName;
+	private String empName;
 	private long empMobileNo;
 	private String empAdd;
 	private Department department;
-	
-	public EmployeeDTO() {}
-	
+	private long salary;
+
+	public EmployeeDTO() {
+	}
+
 	public EmployeeDTO(Employee emp) {
 		this.empId = emp.getEmpId();
 		this.empName = emp.getEmpName();
 		this.empMobileNo = emp.getEmpMobileNo();
 		this.empAdd = emp.getEmpAdd();
 		this.department = emp.getDepartment();
+		this.salary = emp.getSalary();
+	}
+
+	public long getSalary() {
+		return salary;
+	}
+
+	public void setSalary(long salary) {
+		this.salary = salary;
 	}
 
 	public long getEmpId() {
@@ -60,6 +71,5 @@ public class EmployeeDTO {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-	
-	
+
 }

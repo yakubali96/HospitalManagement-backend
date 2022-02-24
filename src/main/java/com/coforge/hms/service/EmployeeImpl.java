@@ -30,6 +30,7 @@ public class EmployeeImpl implements EmployeeService {
 		emp.setEmpAdd(empDTO.getEmpAdd());
 		emp.setEmpMobileNo(empDTO.getEmpMobileNo());
 		emp.setDepartment(empDTO.getDepartment());
+		emp.setSalary(empDTO.getSalary());
 
 		return emp;
 	}
@@ -53,6 +54,7 @@ public class EmployeeImpl implements EmployeeService {
 		copyemployee.setEmpAdd(employee.getEmpAdd());
 		copyemployee.setEmpName(employee.getEmpName());
 		copyemployee.setDepartment(employee.getDepartment());
+		copyemployee.setSalary(employee.getSalary());
 
 		Employee emp = convertDTOtoModel(copyemployee);
 		eRepo.save(emp);

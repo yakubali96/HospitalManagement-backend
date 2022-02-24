@@ -26,6 +26,26 @@ public class Employee {
 	
 	@Column(name = "Emp_Address")
 	private String empAdd;
+	
+	@Column(name = "Emp_Salary")
+	private long salary;
+
+
+
+	public long getSalary() {
+		return salary;
+	}
+
+	
+
+	public void setSalary(long salary) {
+		this.salary = salary;
+	}
+
+
+
+
+
 
 	@OneToOne
 	@JoinColumn(name = "DEP_ID")
@@ -70,6 +90,10 @@ public class Employee {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
+
+
+
+	
 
 
 }

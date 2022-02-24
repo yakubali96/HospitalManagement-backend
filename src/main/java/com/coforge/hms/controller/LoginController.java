@@ -33,7 +33,7 @@ import com.coforge.hms.repository.RoleRepository;
 import com.coforge.hms.repository.UserRepository;
 
 
-//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value="/auth")
 public class LoginController {
